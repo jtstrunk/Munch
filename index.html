@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Munchkin</title>
+</head>
+<body>
+    <div id="Header">
+        <header>
+            <h1><span>Alternate</span>&nbsp;<span>Munchkin</span></h1>
+            <nav>
+                <button id="startBTN">Timed game</button>
+                <button id="regularBTN">Regular game</button>
+                <button id="rulesBTN">Read the rules</button>
+            </nav>
+        </header>
+    </div>
+
+    <div id="rulesPage"  class="Hide">
+        <p>Unique Rules of Alternate Munchkin</p>
+        <ul id="rules">
+            <li>The starting level is 3 instead of 1</li>
+            <li>Create a seperate deck of door cards made up of just race and class cards. Either door deck can be drawn from</li>
+            <li>Distribute a race and a class card to every player</li>
+            <li>After selecting a short, average, or long game, a random and unknown timer in that time range will be set</li>
+            <li>The winner is the player with the highest level at the end of the timer</li>
+            <li>Every player has one more turn after the timer goes off to attempt to get the highest level</li>
+        </ul>
+    </div>
+
+
+    <div id="container">
+        <div id="setUp">
+            <div id="length">
+                <p>Game Length</p>
+                <button id="short">Short</button>
+                <button id="medium">Medium</button>
+                <button id="long">Long</button>
+                <span class="footer">25 - 40 minutes</span><span class="footer">41 - 64 minutes</span><span>65 - 80 minutes</span>
+            </div>
+            <div id="players">
+                <p>Player Count</p>
+                <button id="players3">Three</button>
+                <button id="players4">Four</button>
+                <button id="players5">Five</button>
+                <button id="players6">Six</button>
+            </div>
+
+            <div id="names" class="Hide">
+                <p>Enter Names</p>
+                <input id="name1" type="text" class="Hide leftSide" placeholder="Player One">
+                <input id="name2" type="text" class="Hide leftSide" placeholder="Player Two">
+                <input id="name3" type="text" class="Hide leftSide" placeholder="Player Three">
+                <input id="name4" type="text" class="Hide leftSide" placeholder="Player Four">
+                <input id="name5" type="text" class="Hide leftSide" placeholder="Player Five">
+                <input id="name6" type="text" class="Hide leftSide" placeholder="Player Six">
+            </div>
+
+            <button id="startTimer">Start the game</button>
+        </div>
+        
+    </div>
+
+    <div id="counters" class="Hide">
+
+        <div id="playerOne">
+            <div class="card">
+                <p id="p1name">Player One</p>
+                <div class="stats">
+                    <div>
+                        <span class="title">Level</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                    </div>
+                    <div>
+                        <span class="title">Combat Power</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="playerTwo">
+            <div class="card">
+                <p id="p2name">Player Two</p>
+                <div class="stats">
+                    <span class="title">Level</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                    <span class="title">Combat Power</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="playerThree">
+            <div class="card">
+                <p id="p3name">Player Two</p>
+                <div class="stats">
+                    <span class="title">Level</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                    <span class="title">Combat Power</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="playerFour">
+            <div class="card">
+                <p id="p4name">Player Two</p>
+                <div class="stats">
+                    <span class="title">Level</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                    <span class="title">Combat Power</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="playerFive">
+            <div class="card">
+                <p id="p5name">Player Two</p>
+                <div class="stats">
+                    <span class="title">Level</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                    <span class="title">Combat Power</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="playerSix">
+            <div class="card">
+                <p id="p6name">Player Two</p>
+                <div class="stats">
+                    <span class="title">Level</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                    <span class="title">Combat Power</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

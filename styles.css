@@ -1,0 +1,220 @@
+body {
+    background-color: #2b2828;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Hide {
+    display: none !important;
+}
+
+.selected {
+    transition: color 1s !important;
+    transition: background-color 1s !important;
+    background-color: #ca6434 !important;
+    border-width: 1.5px !important;
+    border-style: solid !important;
+    border-color: #ffdccc !important;
+    color: white;
+}
+
+.deselected {
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #ffdccc;
+    transition: color 1s !important;
+    transition: background-color 1s !important;
+    background-color: #ffdccc !important;
+    color: black;
+}
+
+.gameSelected {
+    transition: all;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 9px;
+    padding-right: 9px;
+    border-width: 1.0px !important;
+    border-style: solid !important;
+    border-color: #ffdccc !important;
+}
+
+.gameDeselected {
+    transition: background-color 1s;
+    border-width: 0px;
+    background-color: #9e5d19;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+    display: block;
+    margin-bottom: 0px;
+    margin-top: 2px;
+}
+
+nav button {
+    background-color: #9e5d19;
+    border: #9e5d19;
+    color: white;
+    margin: 1px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 7px;
+}
+
+#Header{
+    display: flex;
+    justify-content: center;
+
+    height: 65px;
+}
+
+#setUp {
+    display: flex;
+    justify-content: center;
+    width: 316px;
+    flex-direction: column;
+}
+
+#setUp Button {
+    background-color: #ffdccc;
+    height: 30px;
+    width: 70px;
+}
+
+#setUp p {
+    display: block;
+    color: white;
+
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#setUp #startTimer {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ffdccc;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 83px;
+    height: 35px;
+    width: 154px;
+}
+
+#setUp input[type=text] {
+    all:unset;
+    color: #ffdccc;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffdccc;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    height: 20px;
+    width: 130px;
+}
+
+#names .leftSide {
+    margin-right: 4.5px !important;
+}
+
+#setUp input[type=text]::placeholder {
+    color: #b78e79;
+    font-size: small;
+}
+
+#names {
+    width: 350px;
+}
+
+#players button {
+    border-radius: 10px;
+    border: #ffdccc;
+    width: 75px;
+    margin: 0.5px;
+}
+
+#length button {
+    border-radius: 10px;
+    border: #ffdccc;
+    width: 102.6px;
+}
+
+#length span {
+    color: #cd9b83;
+    font-size: 11px;
+    margin-left: 1.5em;
+}
+
+#length .footer {
+    margin: 1.75em;
+}
+
+#counters {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40em;
+}
+
+.card {
+    background-color: #ffdccc;
+    padding-left: 8px;
+    padding-top: 6px;
+    width: 25em;
+    height: 3.5em;
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-top: 2px;
+}
+
+.card span {
+    font-size: 20px;
+}
+
+.card button {
+    border: none;
+    background-color: #ffdccc;
+    font-size: 25px;
+}
+
+.card .stats {
+    display: flex;
+    align-items: center;
+}
+
+.stats .title{
+
+    margin-left: 1.5em;
+}
+
+#counters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 430px;
+}
+
+#rulesPage {
+    margin-left: 15em;
+    color: white;
+}
+
+#rules li {
+    margin-bottom: 7px;
+}
