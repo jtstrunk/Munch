@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <title>Munchkin</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <header>
             <h1><span>Alternate</span>&nbsp;<span>Munchkin</span></h1>
             <nav>
-                <button id="startBTN">Timed game</button>
+                <button id="startBTN" class="gameSelected">Timed game</button>
                 <button id="regularBTN">Regular game</button>
                 <button id="rulesBTN">Read the rules</button>
             </nav>
@@ -32,7 +33,7 @@
     </div>
 
 
-    <div id="container">
+    <div id="container" class="">
         <div id="setUp">
             <div id="length">
                 <p>Game Length</p>
@@ -40,6 +41,11 @@
                 <button id="medium">Medium</button>
                 <button id="long">Long</button>
                 <span class="footer">25 - 40 minutes</span><span class="footer">41 - 64 minutes</span><span>65 - 80 minutes</span>
+            </div>
+            <div id="timerSetting">
+                <p>Notify when mininum time is met</p>
+                <button id="yes"class="timeBTN">Yes</button>
+                <button id="no" class="timeBTN">No</button>
             </div>
             <div id="players">
                 <p>Player Count</p>
@@ -66,15 +72,30 @@
 
     <div id="counters" class="Hide">
 
+        <div id="info">
+            <div>
+                <span>Minutes left until the mininum time is reached for a </span><span id="mode">short</span><span> game</span>
+            </div>
+            <p id="TIMER">10</s>
+        </div>
+        <div id="timeDone" class="Hide">
+            <p>The mininum time has been met</p>
+            <span>The final timer could end at any moment</span>
+        </div>
+        <div id="finishedTimer" class="Hide">
+            <p>TIMER COMPLETE</p>
+            <span>everyone takes one more turn</span>
+        </div>
+
         <div id="playerOne">
             <div class="card">
                 <p id="p1name">Player One</p>
                 <div class="stats">
                     <div>
-                        <span class="title">Level</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                        <span class="title">Level</span>&nbsp;<button id="p1LMinus">-</button>&nbsp;<span id="p1lvl">3</span>&nbsp;<button id="p1LPlus">+</button>
                     </div>
                     <div>
-                        <span class="title">Combat Power</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                        <span class="title">Combat Power</span>&nbsp;<button id="p1CMinus">-</button>&nbsp;<span id="p1cp">3</span>&nbsp;<button id="p1CPlus">+</button>
                     </div>
                 </div>
                 
@@ -85,8 +106,12 @@
             <div class="card">
                 <p id="p2name">Player Two</p>
                 <div class="stats">
-                    <span class="title">Level</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
-                    <span class="title">Combat Power</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                    <div>
+                        <span class="title">Level</span>&nbsp;<button id="p2LMinus">-</button>&nbsp;<span id="p2lvl">3</span>&nbsp;<button id="p2LPlus">+</button>
+                    </div>
+                    <div>
+                        <span class="title">Combat Power</span>&nbsp;<button id="p2CMinus">-</button>&nbsp;<span id="p2cp">3</span>&nbsp;<button id="p2CPlus">+</button>
+                    </div>
                 </div>
 
             </div>
@@ -94,10 +119,14 @@
 
         <div id="playerThree">
             <div class="card">
-                <p id="p3name">Player Two</p>
+                <p id="p3name">Player Three</p>
                 <div class="stats">
-                    <span class="title">Level</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
-                    <span class="title">Combat Power</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                    <div>
+                        <span class="title">Level</span>&nbsp;<button id="p3LMinus">-</button>&nbsp;<span id="p3lvl">3</span>&nbsp;<button id="p3LPlus">+</button>
+                    </div>
+                    <div>
+                        <span class="title">Combat Power</span>&nbsp;<button id="p3CMinus">-</button>&nbsp;<span id="p3cp">3</span>&nbsp;<button id="p3CPlus">+</button>
+                    </div>
                 </div>
 
             </div>
@@ -105,10 +134,14 @@
 
         <div id="playerFour">
             <div class="card">
-                <p id="p4name">Player Two</p>
+                <p id="p4name">Player Four</p>
                 <div class="stats">
-                    <span class="title">Level</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
-                    <span class="title">Combat Power</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                    <div>
+                        <span class="title">Level</span>&nbsp;<button id="p4LMinus">-</button>&nbsp;<span id="p4lvl">3</span>&nbsp;<button id="p4LPlus">+</button>
+                    </div>
+                    <div>
+                        <span class="title">Combat Power</span>&nbsp;<button id="p4CMinus">-</button>&nbsp;<span id="p4cp">3</span>&nbsp;<button id="p4CPlus">+</button>
+                    </div>
                 </div>
 
             </div>
@@ -116,10 +149,14 @@
 
         <div id="playerFive">
             <div class="card">
-                <p id="p5name">Player Two</p>
+                <p id="p5name">Player Five</p>
                 <div class="stats">
-                    <span class="title">Level</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
-                    <span class="title">Combat Power</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                    <div>
+                        <span class="title">Level</span>&nbsp;<button id="p5LMinus">-</button>&nbsp;<span id="p5lvl">3</span>&nbsp;<button id="p5LPlus">+</button>
+                    </div>
+                    <div>
+                        <span class="title">Combat Power</span>&nbsp;<button id="p5CMinus">-</button>&nbsp;<span id="p5cp">3</span>&nbsp;<button id="p5CPlus">+</button>
+                    </div>
                 </div>
 
             </div>
@@ -127,10 +164,14 @@
 
         <div id="playerSix">
             <div class="card">
-                <p id="p6name">Player Two</p>
+                <p id="p6name">Player Six</p>
                 <div class="stats">
-                    <span class="title">Level</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
-                    <span class="title">Combat Power</span>&nbsp;<button>-</button>&nbsp;<span>3</span>&nbsp;<button>+</button>
+                    <div>
+                        <span class="title">Level</span>&nbsp;<button id="p6LMinus">-</button>&nbsp;<span id="p6lvl">3</span>&nbsp;<button id="p6LPlus">+</button>
+                    </div>
+                    <div>
+                        <span class="title">Combat Power</span>&nbsp;<button id="p6CMinus">-</button>&nbsp;<span id="p6cp">3</span>&nbsp;<button id="p6CPlus">+</button>
+                    </div>
                 </div>
 
             </div>

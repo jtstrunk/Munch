@@ -9,6 +9,22 @@ body {
     display: none !important;
 }
 
+.timeSelected {
+    transition: color 1s !important;
+    transition: background-color 1s !important;
+    background-color: #ca6434 !important;
+    border: 1.5px solid #ffdccc !important;
+    color: white;
+}
+
+.timeDeselected {
+    border: 1.5px solid #ffdccc !important;
+    transition: color 1s !important;
+    transition: background-color 1s !important;
+    background-color: #ffdccc !important;
+    color: black;
+}
+
 .selected {
     transition: color 1s !important;
     transition: background-color 1s !important;
@@ -72,7 +88,6 @@ nav button {
 #Header{
     display: flex;
     justify-content: center;
-
     height: 65px;
 }
 
@@ -92,7 +107,6 @@ nav button {
 #setUp p {
     display: block;
     color: white;
-
     margin-top: 15px;
     margin-bottom: 5px;
 }
@@ -108,6 +122,10 @@ nav button {
     width: 154px;
 }
 
+#setUp .lastName {
+    width: 293px !important;
+}
+
 #setUp input[type=text] {
     all:unset;
     color: #ffdccc;
@@ -116,6 +134,7 @@ nav button {
     border-color: #ffdccc;
     border-radius: 15px;
     margin-bottom: 10px;
+    margin-right: 0px;
     padding: 10px;
     padding-top: 7.5px;
     padding-bottom: 7.5px;
@@ -159,6 +178,13 @@ nav button {
     margin: 1.75em;
 }
 
+#timerSetting .timeBTN{
+    width: 156px;
+    border-radius: 10px;
+    border: 1.5px solid #ffdccc;
+
+}
+
 #counters {
     display: flex;
     flex-wrap: wrap;
@@ -166,11 +192,11 @@ nav button {
 }
 
 .card {
-    background-color: #ffdccc;
+    background-color: #ebbba4;
     padding-left: 8px;
     padding-top: 6px;
-    width: 25em;
-    height: 3.5em;
+    width: 15em;
+    height: 6em;
     border: 1px solid black;
     margin: 10px;
     border-radius: 10px;
@@ -188,18 +214,17 @@ nav button {
 
 .card button {
     border: none;
-    background-color: #ffdccc;
+    background-color: #ebbba4;
     font-size: 25px;
 }
 
 .card .stats {
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .stats .title{
-
-    margin-left: 1.5em;
+    margin-left: 1.1em;
 }
 
 #counters {
@@ -207,7 +232,7 @@ nav button {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 430px;
+    width: 35em;
 }
 
 #rulesPage {
@@ -217,4 +242,62 @@ nav button {
 
 #rules li {
     margin-bottom: 7px;
+}
+
+#info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#info div {
+    margin-top: 15px;
+}
+
+#info span {
+    color: white;
+}
+
+#TIMER {
+    font-size: 60px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0px;
+}
+
+#timeDone {
+    width: 405px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 50px;
+}
+
+#timeDone p {
+    margin: 0px;
+    margin-top: 10px;
+    color: white;
+}
+#timeDone span {
+    margin-bottom: 100px;
+    color: white;
+}
+
+#finishedTimer {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#finishedTimer p {
+    font-size: 50px;
+    color:white;
+    margin: 0px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#finishedTimer span {
+    font-size: 20px;
+    color:white;
 }
