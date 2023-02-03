@@ -198,7 +198,7 @@ nav button {
     width: 15em;
     height: 6em;
     border: 1px solid black;
-    margin: 10px;
+    margin: 15px;
     border-radius: 10px;
 }
 
@@ -300,4 +300,8 @@ nav button {
 #finishedTimer span {
     font-size: 20px;
     color:white;
+}
+
+#altTitle{
+    width: 550px;
 }
