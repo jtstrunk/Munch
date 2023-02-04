@@ -276,8 +276,8 @@ async function changeTimer(time) {
     console.log(time);
     for(let dec = time; dec > 0; dec--) {
         document.querySelector("#TIMER").textContent = dec;
-        await sleep(1000);
-        // await sleep(60000);
+        await sleep(60000);
+        // await sleep(1000);
         console.log("timeout");
         if(dec === 1){
             document.querySelector("#timeDone").classList.remove("Hide");
